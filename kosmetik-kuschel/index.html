@@ -1,54 +1,158 @@
 <!doctype html>
-<html lang="de"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>Kosmetikstudio Monika Kuschel – Entwurf</title>
-<style>
-:root{--bg:#faf6f2;--ink:#2b2320;--akzent:#b4594a;--weich:#f0e4dc}
-*{box-sizing:border-box;margin:0}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
-.hinweis{background:var(--ink);color:#fff;font-size:13px;padding:8px 16px;text-align:center}
-.hinweis b{color:var(--weich)}
-header,section,footer{max-width:960px;margin:0 auto;padding:0 20px}
-nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;font-weight:700}
-nav a{color:var(--ink);text-decoration:none;font-weight:500;margin-left:18px;font-size:15px}
-.held{padding:56px 0 64px}
-.art{text-transform:uppercase;letter-spacing:.14em;font-size:13px;color:var(--akzent);font-weight:700}
-h1{font-size:clamp(34px,7vw,60px);line-height:1.05;margin:10px 0 16px;letter-spacing:-.02em;overflow-wrap:anywhere}
-.claim{font-size:20px;max-width:520px;opacity:.85}
-.knoepfe{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.btn{display:inline-block;padding:14px 22px;border-radius:999px;text-decoration:none;font-weight:600}
-.voll{background:var(--akzent);color:#fff}
-.rand{border:2px solid var(--ink);color:var(--ink)}
-h2{font-size:28px;margin:0 0 20px;letter-spacing:-.01em}
-section{padding-top:40px;padding-bottom:40px}
-.raster{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:16px}
-.karte{background:#fff;border-radius:16px;padding:22px;box-shadow:0 1px 0 rgba(0,0,0,.06)}
-.karte svg{width:30px;height:30px;fill:none;stroke:var(--akzent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.karte h3{font-size:18px;margin:12px 0 4px}
-.karte p{opacity:.75;font-size:15px}
-.zwei{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-@media (max-width:640px){.zwei{grid-template-columns:1fr}nav a.weg{display:none}}
-.feld{background:var(--weich);border-radius:16px;padding:24px}
-table{width:100%;border-collapse:collapse}
-td{padding:8px 0;border-bottom:1px solid rgba(0,0,0,.08)}
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><meta name="theme-color" content="#f5ede4">
+<title>Kosmetikstudio Monika Kuschel · Kosmetik in Wolnzach (Entwurf)</title>
+<style>@font-face{font-family:'Fraunces';src:url('../fonts/fraunces.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}@font-face{font-family:'Fraunces';src:url('../fonts/fraunces-italic.woff2') format('woff2');font-weight:100 900;font-style:italic;font-display:swap}@font-face{font-family:'Instrument Sans';src:url('../fonts/instrument-sans.woff2') format('woff2');font-weight:400 700;font-style:normal;font-display:swap}:root{--bg:#f5ede4;--ink:#2a1d18;--akzent:#9c3f2c;--soft:#e9d8c8;--panel:#fffaf4;--linie:rgba(42,29,24,.14);--display:'Fraunces', Georgia, serif;--body:'Instrument Sans', system-ui, sans-serif;--mono:'Instrument Sans', sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;padding-bottom:84px}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.hinweis{position:relative;z-index:30;background:var(--ink);color:var(--bg);font:500 12.5px/1.4 var(--mono);padding:9px 44px 9px 16px;text-align:center}
+.hinweis button{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:0;color:inherit;font-size:20px;cursor:pointer;opacity:.7}
+.kopf{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 82%,transparent);border-bottom:1px solid var(--linie)}
+.kopf .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.marke{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;letter-spacing:-.01em}
+.mono-zeichen{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--akzent);color:#fff;font:600 13px/1 var(--mono);letter-spacing:.04em}
+.kopf nav{display:flex;gap:22px;font-size:15px}
+.kopf nav a{text-decoration:none;opacity:.75}
+.kopf nav a:hover{opacity:1}
+.knopf{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;background:var(--akzent);color:#fff;text-decoration:none;font-weight:600;border:0;cursor:pointer;font-family:inherit;font-size:16px;transition:transform .2s,box-shadow .2s}
+.knopf:hover{transform:translateY(-2px);box-shadow:0 10px 30px -10px var(--akzent)}
+.knopf.leer{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px currentColor}
+.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.etikett{font:500 12.5px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--akzent)}
+.held h1{overflow-wrap:break-word;hyphens:manual}
+[hidden]{display:none!important}
+.abschnitt{padding:96px 0}
+.abschnitt h2{font-family:var(--display);font-size:clamp(34px,5.4vw,60px);line-height:1.02;letter-spacing:-.025em;margin:14px 0 40px;font-weight:400}
+.leistungen{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:1px;background:var(--linie);border:1px solid var(--linie);border-radius:22px;overflow:hidden}
+.leistung{background:var(--panel);padding:30px 26px 34px;position:relative;transition:background .3s}
+.leistung:hover{background:var(--soft)}
+.leistung .nr{font:500 13px var(--mono);color:var(--akzent)}
+.leistung h3{font-family:var(--display);font-size:25px;font-weight:500;margin:26px 0 6px;letter-spacing:-.01em}
+.leistung p{opacity:.7;font-size:15.5px}
+.galerie{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:14px}
+.galerie figure{border-radius:22px;overflow:hidden;aspect-ratio:4/3;position:relative}
+.galerie img{width:100%;height:100%;object-fit:cover;transform:scale(1.03);transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.galerie figure:hover img{transform:scale(1.05)}
+.galerie figcaption{position:absolute;left:14px;bottom:12px;font:500 11.5px var(--mono);background:rgba(0,0,0,.55);color:#fff;padding:5px 9px;border-radius:99px}
+.widget{background:var(--panel);border:1px solid var(--linie);border-radius:28px;padding:clamp(22px,4vw,44px);display:grid;gap:26px}
+.feld-titel{font:500 12.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;opacity:.65;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1.5px solid var(--linie);background:transparent;color:inherit;border-radius:999px;padding:10px 16px;font:inherit;font-size:15px;cursor:pointer;transition:all .2s}
+.chip:hover{border-color:var(--akzent)}
+.chip.an{background:var(--akzent);border-color:var(--akzent);color:#fff}
+.chip small{display:block;font-size:11.5px;opacity:.7}
+.zaehler{display:flex;align-items:center;gap:16px}
+.zaehler button{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--linie);background:none;color:inherit;font-size:22px;cursor:pointer}
+.zaehler output{font-family:var(--display);font-size:34px;min-width:44px;text-align:center}
+textarea,input[type=text]{width:100%;border:1.5px solid var(--linie);background:transparent;color:inherit;border-radius:16px;padding:14px 16px;font:inherit;font-size:16px}
+.foto-feld{border:1.5px dashed var(--linie);border-radius:18px;padding:22px;display:flex;align-items:center;gap:16px;cursor:pointer}
+.foto-feld img{width:72px;height:72px;object-fit:cover;border-radius:12px}
+.zusammen{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;border-top:1px solid var(--linie);padding-top:22px}
+.zusammen p{font-size:15px;opacity:.8}
+.kontakt{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}
+.karte-box{background:var(--panel);border:1px solid var(--linie);border-radius:24px;padding:30px}
+.karte-box h3{font-family:var(--display);font-size:26px;font-weight:500;margin-bottom:12px}
+.status{display:inline-flex;align-items:center;gap:8px;font:500 13px var(--mono);padding:7px 12px;border-radius:99px;background:var(--soft);margin-bottom:16px}
+.status i{width:8px;height:8px;border-radius:50%;background:#b33;display:block}
+.status.offen i{background:#2e9b4f;box-shadow:0 0 0 4px rgba(46,155,79,.2);animation:puls 2s infinite}
+@keyframes puls{50%{box-shadow:0 0 0 8px rgba(46,155,79,0)}}
+table{width:100%;border-collapse:collapse;font-size:15.5px}
+td{padding:9px 0;border-bottom:1px solid var(--linie)}
 td:last-child{text-align:right}
-.klein{font-size:13px;opacity:.65;margin-top:10px}
-.platzhalter{border:2px dashed rgba(0,0,0,.2);border-radius:16px;padding:40px 20px;text-align:center;opacity:.7}
-footer{padding:32px 20px 48px;font-size:14px;opacity:.7}
+tr.heute td{font-weight:700;color:var(--akzent)}
+.leise{font-size:13px;opacity:.6;margin-top:12px}
+.faq details{border-bottom:1px solid var(--linie);padding:20px 0}
+.faq summary{cursor:pointer;font-family:var(--display);font-size:22px;list-style:none;display:flex;justify-content:space-between;gap:20px}
+.faq summary::after{content:"+";color:var(--akzent);font-size:26px;line-height:1;transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{margin-top:10px;opacity:.75;max-width:640px}
+.fuss{border-top:1px solid var(--linie);padding:40px 0 30px;font-size:13.5px;opacity:.7}
+.fuss .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+.leiste{position:fixed;left:12px;right:12px;bottom:12px;z-index:25;display:none;gap:8px;padding:8px;border-radius:22px;background:color-mix(in srgb,var(--ink) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.leiste a{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:9px 0;border-radius:15px;color:var(--bg);text-decoration:none;font-size:12px;font-weight:600}
+.leiste a.haupt{background:var(--akzent);color:#fff}
+.toast{position:fixed;left:50%;bottom:100px;transform:translate(-50%,30px);opacity:0;z-index:40;background:var(--ink);color:var(--bg);padding:16px 20px;border-radius:16px;max-width:min(440px,calc(100% - 32px));font-size:15px;transition:all .35s;pointer-events:none}
+.toast.zeigen{opacity:1;transform:translate(-50%,0)}
+.rein{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rein.da{opacity:1;transform:none}
+.lade{opacity:0;transform:translateY(24px);animation:lade 1s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes lade{to{opacity:1;transform:none}}
+@media (max-width:760px){.kopf nav{display:none}.kontakt{grid-template-columns:1fr}.leiste{display:flex}.abschnitt{padding:72px 0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rein,.lade{opacity:1;transform:none}}
+
+.held{padding:48px 0 40px}
+.held .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:end}
+.held h1{font-family:var(--display);font-weight:300;font-size:clamp(52px,9.5vw,128px);line-height:.92;letter-spacing:-.045em;margin:22px 0 26px;font-variation-settings:"opsz" 144}
+.held h1 em{font-style:italic;color:var(--akzent);font-weight:300}
+.held .claim{font-size:20px;max-width:460px;opacity:.8;margin-bottom:34px}
+.bogen{border-radius:999px 999px 28px 28px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 40px 80px -40px rgba(60,30,20,.55)}
+.bogen img{width:100%;height:100%;object-fit:cover}
+.held .knoepfe{display:flex;gap:12px;flex-wrap:wrap}
+.band{border-block:1px solid var(--linie);overflow:hidden;white-space:nowrap;padding:18px 0;font-family:var(--display);font-style:italic;font-size:30px;font-weight:300}
+.band span{display:inline-block;animation:lauf 38s linear infinite;padding-right:40px}
+.band b{color:var(--akzent);font-weight:300;margin:0 28px}
+@keyframes lauf{to{transform:translateX(-50%)}}
+@media (max-width:760px){.held .wrap{grid-template-columns:1fr;gap:28px}.bogen{max-width:360px;aspect-ratio:4/5}}
 </style></head><body>
-<div class="hinweis"><b>Entwurf</b> von Ferdi Vitzthum für Kosmetikstudio Monika Kuschel – nicht die offizielle Seite des Betriebs.</div>
-<header><nav><span>Kosmetikstudio Monika Kuschel</span><span><a class="weg" href="#leistungen">Angebot</a><a href="#kontakt">Kontakt</a></span></nav>
-<div class="held"><div class="art">Kosmetik in Wolnzach</div><h1>Kosmetikstudio Monika Kuschel</h1>
-<p class="claim">Gut aussehen fängt hier an.</p>
-<div class="knoepfe"><a class="btn voll" href="#kontakt">Termin vereinbaren</a><a class="btn rand" href="https://www.openstreetmap.org/search?query=Kosmetikstudio+Monika+Kuschel+Lug+ins+Land+10,+85283+Wolnzach">Route planen</a></div></div></header>
-<section id="leistungen"><h2>Was wir machen</h2><div class="raster"><div class="karte"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><h3>Gesichtsbehandlung</h3><p>Reinigung, Pflege, Massage</p></div><div class="karte"><svg viewBox="0 0 24 24"><path d="M4 20h16M6 16l6-12 6 12"/></svg><h3>Hände &amp; Füße</h3><p>Maniküre und Pediküre</p></div><div class="karte"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M4 10h16"/></svg><h3>Wimpern &amp; Brauen</h3><p>Färben und Form</p></div><div class="karte"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/></svg><h3>Make-up</h3><p>Für Alltag und Anlass</p></div></div></section>
-<section><div class="platzhalter">Hier kommen Ihre eigenen Fotos hin – Laden, Team, Arbeiten.</div></section>
-<section id="kontakt"><h2>Kontakt</h2><div class="zwei">
-<div class="feld"><h3>Adresse</h3><p>Kosmetikstudio Monika Kuschel<br>Lug ins Land 10<br>85283 Wolnzach</p>
-<p style="margin-top:12px">Telefon: <i>Ihre Nummer</i><br>E-Mail: <i>Ihre Adresse</i></p>
-<div class="knoepfe"><a class="btn voll" href="https://www.openstreetmap.org/search?query=Kosmetikstudio+Monika+Kuschel+Lug+ins+Land+10,+85283+Wolnzach">Auf der Karte zeigen</a></div></div>
-<div class="feld"><h3>Öffnungszeiten</h3><table><tr><td>Di – Fr</td><td>9:00 – 18:00</td></tr><tr><td>Sa</td><td>8:00 – 13:00</td></tr><tr><td>So, Mo</td><td>geschlossen</td></tr></table><p class="klein">Beispielzeiten – im fertigen Auftritt stehen Ihre echten.</p></div>
-</div></section>
-<footer>Entwurf zum Anschauen, erstellt von Ferdi Vitzthum · ferdvit92@gmail.com · Läuft ohne Cookies und ohne eingebundene Fremddienste. Wird nach 4 Wochen gelöscht, wenn kein Interesse besteht.</footer>
-</body></html>
+<div class="hinweis">Entwurf von Ferdi Vitzthum für Kosmetikstudio Monika Kuschel – nicht die offizielle Seite des Betriebs.<button aria-label="Hinweis schließen">×</button></div>
+<header class="kopf"><div class="wrap"><a class="marke" href="#"><span class="mono-zeichen">KK</span>Kosmetikstudio Monika Kuschel</a>
+<nav><a href="#leistungen">Angebot</a><a href="#anfrage">Termin anfragen</a><a href="#kontakt">Kontakt</a></nav></div></header>
+<section class="held"><div class="wrap">
+<div><div class="etikett lade">Kosmetik · Wolnzach</div><h1 class="lade" style="animation-delay:.1s">Kosmetikstudio Monika <em>Kuschel</em></h1>
+<p class="claim lade" style="animation-delay:.2s">Gut aussehen fängt hier an.</p><div class="knoepfe lade" style="animation-delay:.35s"><a class="knopf" href="#anfrage">Termin anfragen <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="knopf leer" href="#kontakt"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Anfahrt</a></div></div>
+<div class="bogen lade" style="animation-delay:.25s"><img src="../img/kosmetik-naegel.jpg" alt=""></div></div></section>
+<div class="band" aria-hidden="true"><span>Gesichtsbehandlung<b>✦</b>Hände &amp; Füße<b>✦</b>Wimpern &amp; Brauen<b>✦</b>Make-up<b>✦</b>Gesichtsbehandlung<b>✦</b>Hände &amp; Füße<b>✦</b>Wimpern &amp; Brauen<b>✦</b>Make-up<b>✦</b>Gesichtsbehandlung<b>✦</b>Hände &amp; Füße<b>✦</b>Wimpern &amp; Brauen<b>✦</b>Make-up<b>✦</b>Gesichtsbehandlung<b>✦</b>Hände &amp; Füße<b>✦</b>Wimpern &amp; Brauen<b>✦</b>Make-up<b>✦</b></span></div>
+<section class="abschnitt" id="leistungen"><div class="wrap"><div class="etikett rein">Angebot</div><h2 class="rein">Was wir für Sie machen.</h2><div class="leistungen"><div class="leistung rein" style="transition-delay:0.00s"><span class="nr">01</span><h3>Gesichtsbehandlung</h3><p>Reinigung, Pflege, Massage</p></div><div class="leistung rein" style="transition-delay:0.08s"><span class="nr">02</span><h3>Hände &amp; Füße</h3><p>Maniküre und Pediküre</p></div><div class="leistung rein" style="transition-delay:0.16s"><span class="nr">03</span><h3>Wimpern &amp; Brauen</h3><p>Färben und Form</p></div><div class="leistung rein" style="transition-delay:0.24s"><span class="nr">04</span><h3>Make-up</h3><p>Für Alltag und Anlass</p></div></div></div></section>
+<section class="abschnitt" id="anfrage" style="padding-top:0"><div class="wrap"><div class="etikett rein">Online</div>
+<h2 class="rein">Termin in 30 Sekunden.</h2><div class="widget rein" data-art="termin">
+<div><div class="feld-titel">1 · Was darf's sein?</div><div class="chips"><button class="chip" data-gruppe="leistung">Gesichtsbehandlung</button><button class="chip" data-gruppe="leistung">Hände &amp; Füße</button><button class="chip" data-gruppe="leistung">Wimpern &amp; Brauen</button><button class="chip" data-gruppe="leistung">Make-up</button></div></div>
+<div><div class="feld-titel">2 · Wann passt es?</div><div class="chips js-tage"></div></div>
+<div><div class="feld-titel">3 · Uhrzeit</div><div class="chips"><button class="chip" data-gruppe="zeit">9:00</button><button class="chip" data-gruppe="zeit">10:30</button><button class="chip" data-gruppe="zeit">12:00</button><button class="chip" data-gruppe="zeit">14:00</button><button class="chip" data-gruppe="zeit">15:30</button><button class="chip" data-gruppe="zeit">17:00</button></div></div>
+<div class="zusammen"><p class="js-zusammen">Wählen Sie Leistung, Tag und Uhrzeit.</p><button class="knopf js-senden">Termin anfragen <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></div></div></section>
+<section class="abschnitt" style="padding-top:0"><div class="wrap"><div class="galerie"><figure class="rein"><img src="../img/kosmetik-naegel.jpg" alt="" loading="lazy"><figcaption>Beispielfoto – hier Ihre eigenen</figcaption></figure><figure class="rein"><img src="../img/kosmetik-lack.jpg" alt="" loading="lazy"><figcaption>Beispielfoto – hier Ihre eigenen</figcaption></figure></div></div></section>
+<section class="abschnitt" id="kontakt" style="padding-top:0"><div class="wrap"><div class="etikett rein">Kontakt</div><h2 class="rein">So finden Sie uns.</h2>
+<div class="kontakt"><div class="karte-box rein"><span class="status js-status"><i></i><b>…</b></span><h3>Kosmetikstudio Monika Kuschel</h3>
+<p>Lug ins Land 10<br>85283 Wolnzach</p><p style="margin:14px 0 22px">Telefon: <i>Ihre Nummer</i><br>E-Mail: <i>Ihre Adresse</i></p>
+<div style="display:flex;gap:10px;flex-wrap:wrap"><a class="knopf js-tel" href="#"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg> Anrufen</a><a class="knopf leer" href="https://www.openstreetmap.org/search?query=Lug+ins+Land+10+85283+Wolnzach" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Route</a></div></div>
+<div class="karte-box rein"><h3>Öffnungszeiten</h3><table><tr data-tag="0"><td>Mo</td><td>geschlossen</td></tr><tr data-tag="1"><td>Di</td><td>09:00 – 18:00</td></tr><tr data-tag="2"><td>Mi</td><td>09:00 – 18:00</td></tr><tr data-tag="3"><td>Do</td><td>09:00 – 20:00</td></tr><tr data-tag="4"><td>Fr</td><td>09:00 – 18:00</td></tr><tr data-tag="5"><td>Sa</td><td>08:00 – 13:00</td></tr><tr data-tag="6"><td>So</td><td>geschlossen</td></tr></table><p class="leise">Beispielzeiten – im fertigen Auftritt stehen Ihre echten.</p></div></div></div></section>
+<section class="abschnitt faq" style="padding-top:0"><div class="wrap"><div class="etikett rein">Gut zu wissen</div><h2 class="rein">Häufige Fragen.</h2><div class="rein"><details><summary>Muss ich einen Termin machen?</summary><p>Am besten ja – über das Formular oben oder telefonisch. Spontan klappt es auch, wenn gerade frei ist.</p></details><details><summary>Wie lange dauert Farbe?</summary><p>Je nach Länge und Wunsch zwischen 90 Minuten und drei Stunden. Wir sagen es Ihnen vorher.</p></details><details><summary>Kann ich mit Karte zahlen?</summary><p>Hier steht im fertigen Auftritt, was bei Ihnen gilt.</p></details></div></div></section>
+<footer class="fuss"><div class="wrap"><span>Entwurf von Ferdi Vitzthum · ferdvit92@gmail.com</span><span>Ohne Cookies, ohne Tracking, Schriften lokal · Fotos: Rawpixel (CC0), Platzhalter · wird nach 4 Wochen gelöscht</span></div></footer>
+<nav class="leiste"><a class="js-tel" href="#"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Anrufen</a><a href="https://www.openstreetmap.org/search?query=Lug+ins+Land+10+85283+Wolnzach" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Route</a><a class="haupt" href="#anfrage"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Termin anfragen</a></nav>
+<script>window.__DEMO__={"oeffnung": {"1": ["09:00-18:00"], "2": ["09:00-18:00"], "3": ["09:00-20:00"], "4": ["09:00-18:00"], "5": ["08:00-13:00"]}};
+const D=window.__DEMO__;
+document.querySelectorAll('.hinweis button').forEach(b=>b.onclick=()=>b.parentElement.remove());
+const toast=document.createElement('div');toast.className='toast';document.body.appendChild(toast);
+let tt;function zeig(t){toast.textContent=t;toast.classList.add('zeigen');clearTimeout(tt);tt=setTimeout(()=>toast.classList.remove('zeigen'),4200)}
+document.querySelectorAll('.js-tel').forEach(a=>a.onclick=ev=>{ev.preventDefault();zeig('Hier steht im fertigen Auftritt Ihre Nummer – ein Tipp, und das Handy ruft an.')});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('da');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rein').forEach(el=>io.observe(el));
+// Öffnungszeiten live
+const jetzt=new Date(),wt=(jetzt.getDay()+6)%7,min=jetzt.getHours()*60+jetzt.getMinutes();
+const zu=s=>{const[a,b]=s.split('-').map(x=>{const[h,m]=x.split(':');return h*60+ +m});return[a,b]};
+const heute=(D.oeffnung[wt]||[]).map(zu),offen=heute.some(([a,b])=>min>=a&&min<b);
+let txt;if(offen){const b=heute.find(([a,b])=>min>=a&&min<b)[1];txt='Jetzt geöffnet · bis '+Math.floor(b/60)+':'+String(b%60).padStart(2,'0')}
+else{const n=heute.find(([a])=>a>min);txt=n?'Geschlossen · öffnet um '+Math.floor(n[0]/60)+':'+String(n[0]%60).padStart(2,'0'):'Heute geschlossen'}
+document.querySelectorAll('.js-status').forEach(s=>{s.classList.toggle('offen',offen);s.querySelector('b').textContent=txt});
+document.querySelectorAll(`tr[data-tag="${wt}"]`).forEach(r=>r.classList.add('heute'));
+// Tage
+const TG=['So','Mo','Di','Mi','Do','Fr','Sa'];
+document.querySelectorAll('.js-tage').forEach(box=>{let d=new Date(),n=0;while(n<6){d.setDate(d.getDate()+1);const w=(d.getDay()+6)%7;if(!D.oeffnung[w])continue;
+const b=document.createElement('button');b.className='chip';b.dataset.gruppe='tag';b.innerHTML=TG[d.getDay()]+'<small>'+d.getDate()+'.'+(d.getMonth()+1)+'.</small>';b.dataset.wert=TG[d.getDay()]+' '+d.getDate()+'.'+(d.getMonth()+1)+'.';box.appendChild(b);n++}});
+// Auswahl
+document.querySelectorAll('.widget').forEach(w=>{const wahl={};
+w.addEventListener('click',ev=>{const c=ev.target.closest('.chip[data-gruppe]');if(!c)return;
+w.querySelectorAll(`.chip[data-gruppe="${c.dataset.gruppe}"]`).forEach(x=>x.classList.remove('an'));c.classList.add('an');wahl[c.dataset.gruppe]=c.dataset.wert||c.textContent;
+const z=w.querySelector('.js-zusammen');if(z)z.textContent=Object.values(wahl).join(' · ')});
+const zahl=w.querySelector('.js-zahl');if(zahl){w.querySelector('.js-plus').onclick=()=>zahl.textContent=Math.min(30,+zahl.textContent+1);w.querySelector('.js-minus').onclick=()=>zahl.textContent=Math.max(1,+zahl.textContent-1)}
+const sch=[...w.querySelectorAll('.schritt')],bal=[...w.querySelectorAll('.schritt-kopf i')];let s=0;
+w.querySelectorAll('.js-weiter').forEach(b=>b.onclick=()=>{sch[s].classList.remove('an');s++;sch[s].classList.add('an');bal.forEach((x,i)=>x.classList.toggle('an',i<=s))});
+const f=w.querySelector('.js-foto');if(f)f.onchange=()=>{const d=f.files[0];if(d){w.querySelector('.js-vorschau').innerHTML='<img src="'+URL.createObjectURL(d)+'" alt="">'}};
+const send=w.querySelector('.js-senden');if(send)send.onclick=()=>zeig('Das ist eine Demo – im fertigen Auftritt kommt diese Anfrage direkt bei Ihnen per E-Mail oder WhatsApp an.')});
+// Karte
+document.querySelectorAll('[data-tab]').forEach(t=>t.onclick=()=>{document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('an',x===t));
+document.querySelectorAll('[data-liste]').forEach(l=>l.hidden=l.dataset.liste!==t.dataset.tab)});
+</script></body></html>
